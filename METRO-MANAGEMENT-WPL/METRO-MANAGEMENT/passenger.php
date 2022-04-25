@@ -40,7 +40,6 @@
             VALUES('$aadhar_num','$temp_id')");
 
             $in_ch2 = mysqli_query($conn,"UPDATE SEATS SET AVAILABLE = AVAILABLE - 1 WHERE METRO_ID = $temp_id and AVAILABLE > 0");
-
         }
         ?>
 
@@ -66,7 +65,7 @@
             <img src="images/formbanner.jpg" alt="banner pic">
             <div class="info-form">
                 <h2></h2>
-                <form method="post">
+                <form method="post" action="ticket.php">
                     <div class="container">
 
                         <label for="aadhar"><b>Aadhar No.</b></label>

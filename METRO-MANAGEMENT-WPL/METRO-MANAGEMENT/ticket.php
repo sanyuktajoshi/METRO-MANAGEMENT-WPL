@@ -33,7 +33,13 @@
             
             $row = mysqli_fetch_array($in_ch1,MYSQLI_NUM);
 
-            $temp_id = $row[0];
+			$in_ch_ticketid = mysqli_query($conn, "SELECT MAX(TICKET_ID) FROM TRAVELS_IN");
+			$temp_id = $row[0];
+
+			$row_ticket = mysqli_fetch_array($in_ch_ticketid,MYSQLI_NUM); 
+			$temp_ticketid = $row_ticket[0];
+
+            
             $in_ch2 = mysqli_query($conn,"INSERT INTO `metro_station`.`travels_in`(aadhar_no, metro_id) 
             VALUES('$aadhar_num','$temp_id')");
 
@@ -70,8 +76,8 @@
 				</div>
 				<div class="middle-row middle-3-3">
 					<span class="ticket-detail middle-from"><?php echo $source;?></span>
-					<span class="ticket-detail middle-valid">23&middot;MCH&middot;16</span>
-					<span class="ticket-detail middle-price">£5.30X</span>
+					<span class="ticket-detail middle-valid"><?php echo $temp_ticketid;?></span>
+					<span class="ticket-detail middle-price">Rs5.30</span>
 				</div>
 				<div class="middle-row middle-4">
 					<span class="ticket-label middle-to">Destination</span>
@@ -80,8 +86,8 @@
 				</div>
 				<div class="middle-row middle-4-4">
 					<span class="ticket-detail middle-to"><?php echo $destination;?></span>
-					<span class="ticket-detail-small middle-route">Any Permitted</span>
-					<span class="ticket-detail-small middle-validity">On Date Shown</span>
+					<span class="ticket-detail-small middle-route"><?php echo $f_name;?></span>
+					<span class="ticket-detail-small middle-validity"><?php echo $gender;?></span>
 				</div>
 			</div>
 
