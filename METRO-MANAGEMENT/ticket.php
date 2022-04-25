@@ -65,7 +65,7 @@
 				</div>
 				<div class="middle-row middle-3">
 					<span class="ticket-label middle-from">From</span>
-					<span class="ticket-label middle-valid">Ticket No.</span>
+					<span class="ticket-label middle-valid">Ticket Number</span>
 					<span class="ticket-label middle-price">Price</span>
 				</div>
 				<div class="middle-row middle-3-3">
