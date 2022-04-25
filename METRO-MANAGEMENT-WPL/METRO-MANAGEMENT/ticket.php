@@ -64,22 +64,22 @@
 				<div class="middle-row middle-2-2">
 				</div>
 				<div class="middle-row middle-3">
-					<span class="ticket-label middle-from">From</span>
+					<span class="ticket-label middle-from">Source</span>
 					<span class="ticket-label middle-valid">Ticket No.</span>
 					<span class="ticket-label middle-price">Price</span>
 				</div>
 				<div class="middle-row middle-3-3">
-					<span class="ticket-detail middle-from">Tamworth *</span>
+					<span class="ticket-detail middle-from"><?php echo $source;?></span>
 					<span class="ticket-detail middle-valid">23&middot;MCH&middot;16</span>
 					<span class="ticket-detail middle-price">£5.30X</span>
 				</div>
 				<div class="middle-row middle-4">
-					<span class="ticket-label middle-to">To</span>
+					<span class="ticket-label middle-to">Destination</span>
 					<span class="ticket-label middle-route">Name</span>
 					<span class="ticket-label middle-validity">Gender</span>
 				</div>
 				<div class="middle-row middle-4-4">
-					<span class="ticket-detail middle-to">Birmingham Stns</span>
+					<span class="ticket-detail middle-to"><?php echo $destination;?></span>
 					<span class="ticket-detail-small middle-route">Any Permitted</span>
 					<span class="ticket-detail-small middle-validity">On Date Shown</span>
 				</div>
