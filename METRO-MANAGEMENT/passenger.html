@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="form.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <img src="img/logo.png" alt="">
+        <a href="home.html">
+            <h1>MUMBAI&nbsp;METRO</h1>
+        </a>
+        <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Book Ticket</a></li>
+            <li><a href="">Login</a></li>
+        </ul>
+    </header>
+    <section class="main-content">
+        <div class=banner>
+            <img src="img/formbanner.jpg" alt="banner pic">
+            <div class="info-form">
+                <h2></h2>
+                <form action="action_page.php" method="post">
+                    <div class="container">
+
+                        <label for="aadhar"><b>Aadhar No.</b></label>
+                        <input type="text" placeholder="Enter valid Aadhar Num" name="aadhar" required>
+
+                        <label for="fname"><b>First Name</b></label>
+                        <input type="text" placeholder="Enter First Name" name="fname" required>
+
+                        <label for="lname"><b>Last Name</b></label>
+                        <input type="text" placeholder="Enter Last Name" name="lname" required>
+
+                        <label for="age"><b>Age</b></label>
+                        <input type="number" placeholder="Age" name="age" id="age" required>
+
+                        <div class="gender" label ="gender">
+                            <label for="gender"> <b>Gender</b></label>
+                            <select name="gender">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">other</option>
+                            </select>
+                        </div>
+                       
+                        <div class="source" label ="source">
+                            <label for="source"> <b>Source</b></label>
+                            <select name="source">
+                                <option value="Thane">Thane</option>
+                                <option value="Ghatkopar">Ghatkopar</option>
+                                <option value="Powai">Powai</option>
+                                <option value="Churchgate">Churchgate</option>
+                            </select>
+                        </div>
+
+                        <div class="destination" label ="destination">
+                            <label for="destination"> <b>Source</b></label>
+                            <select name="destination">
+                                <option value="Ghatkopar">Ghatkopar</option>
+                                <option value="Thane">Thane</option>
+                                <option value="Powai">Powai</option>
+                                <option value="Churchgate">Churchgate</option>
+                            </select>
+                        </div>
+
+                        <button type="submit">Book Ticket</button>
+                        
+                    </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>
