@@ -1,0 +1,132 @@
+body{
+    margin: 0;
+}
+.navbar{
+    height: 70px;
+    box-shadow: rgb(87, 92, 100) 0px 8px 24px;
+    background-color: #fefae0;
+    display: flex;
+    position:relative;
+    
+}
+
+.navbar img{
+    margin: 5px 30px;
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+    
+}
+
+h1 { 
+    margin: 5px 10px 5px 10px;
+    font-family: garamond;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 50px;
+    color: #283618;
+    align-items: center;
+    
+}
+
+
+ul {
+    
+    text-decoration: none;
+    margin-left: auto; 
+    margin-right: 30px;
+}
+.navbar ul li{
+    margin: 10px;
+    
+    font-size: 20px;
+    display: inline;
+}
+
+
+ul a{
+    color: #606c38;
+    text-decoration: none;
+}
+ul a:hover{
+    color: #89b0ae;
+}
+
+
+
+
+.banner img{
+    max-width: 100%;
+    max-height: 100%;
+    margin:0;
+    box-shadow: inset;
+    
+    
+}
+.banner .info-form{
+
+    position:absolute;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(250,249,249,0.84);
+    width: 400px;
+    height:750px; 
+    font-family: garamond;
+    font-size: 20px;
+}
+
+input[type=text], input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    /*display: inline-block;*/
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #555b6e;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* Add a hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Add padding to containers */
+.info-form .container {
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+  
+  /* The "Forgot password" text */
+
+
+  label {
+    display: block;
+    font-size: 20px;
+    padding: 5px;
+    
+}
+  h2{
+    
+      width: 50%;
+      text-align: center;
+      margin:100px;
+      font-family: garamond;
+      font-size: 40px;
+  }
