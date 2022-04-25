@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+}
+.navbar{
+    height: 70px;
+    box-shadow: rgb(87, 92, 100) 0px 8px 24px;
+    background-color: #ffd6ba;
+    display: flex;
+    position:relative;
+    
+}
+
+.navbar img{
+    margin: 5px 30px;
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+    
+}
+
+h1 { 
+    margin: 5px 10px 5px 10px;
+    font-family: garamond;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 50px;
+    color: #555b6e;
+    align-items: center;
+}
+
+
+ul {
+    margin-left: 45%;
+    text-decoration: none;
+}
+.navbar ul li{
+    margin: 10px;
+    
+    font-size: 20px;
+    display: inline;
+    align-items: center;
+}
+
+
+ul a{
+    color: #555b6e;
+    text-decoration: none;
+}
+ul a:hover{
+    color: #89b0ae;
+}
