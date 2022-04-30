@@ -54,7 +54,7 @@
             <h1>MUMBAI&nbsp;METRO</h1>
         </a>
         <ul>
-            <li><a href="homepage.html">Home</a></li>
+            <li><a href="homepage.php">Home</a></li>
             <li><a href="">About Us</a></li>
             <li><a href="">Book Ticket</a></li>
             <li><a href="">Login</a></li>
