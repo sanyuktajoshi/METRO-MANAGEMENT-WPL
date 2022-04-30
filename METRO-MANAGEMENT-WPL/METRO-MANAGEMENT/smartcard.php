@@ -7,6 +7,35 @@
     <link rel="stylesheet" href="form.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+
+    <?php
+    session_start();
+
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "metro_station";
+
+        $conn = mysqli_connect($servername,$username,$password,$dbname);
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST'){     
+
+            $_SESSION['scid'] = $_POST["scid"];
+            $_SESSION['password'] = $_POST["password"];
+            
+            $in_ch1 = mysqli_query($conn, "SELECT * FROM SMART_CARD WHERE SMART_CARD_ID='$scid' and PASSWORD='$password' ");
+            
+            $row = mysqli_fetch_array($in_ch1,MYSQLI_NUM);
+
+        }
+        ?>
+
+
+
+
+
+
 </head>
 
 <body>
@@ -27,7 +56,7 @@
             <img src="images/formbanner.jpg" alt="banner pic">
             <div class="info-form">
                 <h2></h2>
-                <form action="action_page.php" method="post">
+                <form method="post" action="smart_card_booking.php">
                     <div class="container">
 
                         <label for="scid"><b>Smart Card ID</b></label>

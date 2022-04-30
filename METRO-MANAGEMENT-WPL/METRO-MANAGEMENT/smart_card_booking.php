@@ -10,7 +10,7 @@
 
 
     <?php
-
+    session_start();
         $servername = "localhost";
         $username = "root";
         $password = "";
@@ -18,30 +18,20 @@
 
         $conn = mysqli_connect($servername,$username,$password,$dbname);
 
-        if ($_SERVER['REQUEST_METHOD'] == 'POST'){     
 
-            $aadhar_num = $_POST["aadhar"];
-            $f_name = $_POST["fname"];
-            $l_name = $_POST["lname"];
-            $age = $_POST["age"];
-            $gender = $_POST["gender"];
-            $source = $_POST["source"];
-            $destination = $_POST["destination"];
-
-            $in_ch = mysqli_query($conn,"INSERT INTO `metro_station`.`general`(aadhar_no, f_name, l_name, age, gender) 
-            VALUES('$aadhar_num','$f_name','$l_name','$age','$gender')");
-
-            $in_ch1 = mysqli_query($conn, "SELECT METRO_ID FROM METRO WHERE SOURCE='$source' and destination='$destination' ");
+        if ($_SERVER['REQUEST_METHOD'] == 'POST'){ 
+            $scid = $_POST["scid"];
+            $password = $_POST["password"];
+            
+            $in_ch1 = mysqli_query($conn, "SELECT * FROM SMART_CARD WHERE SMART_CARD_ID='$scid' and PASSWORD='$password' ");
             
             $row = mysqli_fetch_array($in_ch1,MYSQLI_NUM);
-
-            $temp_id = $row[0];
-            $in_ch2 = mysqli_query($conn,"INSERT INTO `metro_station`.`travels_in`(aadhar_no, metro_id) 
-            VALUES('$aadhar_num','$temp_id')");
-
-            $in_ch2 = mysqli_query($conn,"UPDATE SEATS SET AVAILABLE = AVAILABLE - 1 WHERE METRO_ID = $temp_id and AVAILABLE > 0");
+            
         }
-    ?>
+        ?>
+
+
+
 
 
 
@@ -54,7 +44,7 @@
             <h1>MUMBAI&nbsp;METRO</h1>
         </a>
         <ul>
-            <li><a href="homepage.php">Home</a></li>
+            <li><a href="homepage.html">Home</a></li>
             <li><a href="">About Us</a></li>
             <li><a href="">Book Ticket</a></li>
             <li><a href="">Login</a></li>
@@ -64,32 +54,12 @@
         <div class=banner>
             <img src="images/formbanner.jpg" alt="banner pic">
             <div class="info-form">
-                <h2></h2>
-                <form method="post" action="ticket.php">
+                <p>Journies left:</p>
+                <span class="ticket-detail middle-from"><?php echo $row[8];?></span>
+                <form method="post" action="ticket_smartcard.php">
                     <div class="container">
 
-                        <label for="aadhar"><b>Aadhar No.</b></label>
-                        <input type="text" placeholder="Enter valid Aadhar Num" name="aadhar" required>
-
-                        <label for="fname"><b>First Name</b></label>
-                        <input type="text" placeholder="Enter First Name" name="fname" required>
-
-                        <label for="lname"><b>Last Name</b></label>
-                        <input type="text" placeholder="Enter Last Name" name="lname" required>
-
-                        <label for="age"><b>Age</b></label>
-                        <input type="number" placeholder="Age" name="age" id="age" required>
-
-                        <div class="gender" label ="gender">
-                            <label for="gender"> <b>Gender</b></label>
-                            <select name="gender">
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                                <option value="other">other</option>
-                            </select>
-                        </div>
-                       
-                        <div class="source" label ="source">
+                    <div class="source" label ="source">
                             <label for="source"> <b>Source</b></label>
                             <select name="source">
                                 <option value="thane">thane</option>
@@ -119,8 +89,8 @@
 
                             </select>
                         </div>
-
-                        <button type="submit">Book Ticket</button>
+                        
+                        <button type="submit">Book ticket!</button>
                         
                     </div>
 
