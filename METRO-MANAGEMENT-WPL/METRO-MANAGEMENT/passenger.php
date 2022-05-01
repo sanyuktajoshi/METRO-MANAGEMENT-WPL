@@ -62,11 +62,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
     </script>
     <header class="navbar">
         <img src="images/logo.png" alt="">
-        <a href="home.html">
+        <a href="homepage.php">
             <h1>MUMBAI&nbsp;METRO</h1>
         </a>
         <ul>
-            <li><a href="homepage.html">Home</a></li>
+            <li><a href="homepage.php">Home</a></li>
             <li><a href="selection.html">Book Ticket</a></li>
             <li><a href="">Contact Us</a></li>
             <li><a href="">About Us</a></li>

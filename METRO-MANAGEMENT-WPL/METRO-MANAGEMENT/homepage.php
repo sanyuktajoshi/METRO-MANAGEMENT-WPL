@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+<script src="animation.js"></script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +12,7 @@
 </head>
 
 <body>
+    <script src="animation.js"></script>
     <header class="navbar">
         <img src="images/logo.png" alt="">
         <a href="home.html">
@@ -17,9 +20,9 @@
         </a>
         <ul>
             <li><a href="homepage.html">Home</a></li>
-            <li><a href="">About Us</a></li>
-            <li><a href="passenger.php">Book Ticket</a></li>
+            <li><a href="selection.html">Book Ticket</a></li>
             <li><a href="">Contact Us</a></li>
+            <li><a href="">About Us</a></li>
         </ul>
     </header>
     <section class="main-content">

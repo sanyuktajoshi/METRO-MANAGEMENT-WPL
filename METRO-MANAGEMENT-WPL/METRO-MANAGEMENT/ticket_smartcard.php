@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="ticket.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<?php session_start();
 
-    <?php
-    session_start();
+		$scid2 = $_SESSION['sscid'];
+		$pd2 = $_SESSION['spassword'];
+
         $servername = "localhost";
         $username = "root";
         $password = "";
@@ -18,11 +12,7 @@
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST'){ 
 
-            if(isset($_SESSION['scid'])) {   
-                $scid1 = $_SESSION['scid'];
-                $pd = $_SESSION['password'];
-            }
-            $in_ch1 = mysqli_query($conn, "SELECT * FROM SMART_CARD WHERE SMART_CARD_ID='$scid1' and PASSWORD='$pd' ");
+            $in_ch1 = mysqli_query($conn, "SELECT * FROM SMART_CARD WHERE SMART_CARD_ID='$scid2' and PASSWORD='$pd2' ");
             
             $row = mysqli_fetch_array($in_ch1,MYSQLI_NUM);
             $aadhar_num = $row[2];
@@ -57,6 +47,18 @@
 
         }
         ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="ticket.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
 </head>
 <body>
 

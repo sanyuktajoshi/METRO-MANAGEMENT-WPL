@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<script src="animation.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="form.css">
@@ -9,8 +10,12 @@
     <title>Document</title>
 
 
-    <?php
-    session_start();
+    <?php session_start();
+
+        $scid2 = $_SESSION['sscid'];
+        $pd2 = $_SESSION['spassword'];
+
+
         $servername = "localhost";
         $username = "root";
         $password = "";
@@ -20,20 +25,15 @@
 
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST'){ 
-            $scid = $_POST["scid"];
-            $password = $_POST["password"];
+
             
-            $in_ch1 = mysqli_query($conn, "SELECT * FROM SMART_CARD WHERE SMART_CARD_ID='$scid' and PASSWORD='$password' ");
+            
+            $in_ch1 = mysqli_query($conn, "SELECT * FROM SMART_CARD WHERE SMART_CARD_ID='$scid2' AND PASSWORD='$pd2'  ");
             
             $row = mysqli_fetch_array($in_ch1,MYSQLI_NUM);
             
         }
         ?>
-
-
-
-
-
 
 </head>
 

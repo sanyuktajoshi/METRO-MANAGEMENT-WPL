@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<script src="animation.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="form.css">
@@ -11,7 +12,7 @@
 
     <?php
     session_start();
-
+    
         $servername = "localhost";
         $username = "root";
         $password = "";
@@ -21,15 +22,19 @@
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST'){     
 
-            $_SESSION['scid'] = $_POST["scid"];
-            $_SESSION['password'] = $_POST["password"];
+            $scid = $_POST['scid'];
+           
+            $password = $_POST['password'];
+
+            $_SESSION['sscid'] = $scid;
+            $_SESSION['spassword'] = $password;
             
             $in_ch1 = mysqli_query($conn, "SELECT * FROM SMART_CARD WHERE SMART_CARD_ID='$scid' and PASSWORD='$password' ");
             
             $row = mysqli_fetch_array($in_ch1,MYSQLI_NUM);
 
         }
-        ?>
+    ?>
 
 
 
@@ -41,11 +46,11 @@
 <body>
     <header class="navbar">
         <img src="images/logo.png" alt="">
-        <a href="home.html">
+        <a href="homepage.php">
             <h1>MUMBAI&nbsp;METRO</h1>
         </a>
         <ul>
-            <li><a href="homepage.html">Home</a></li>
+            <li><a href="homepage.php">Home</a></li>
             <li><a href="selection.html">Book Ticket</a></li>
             <li><a href="">Contact Us</a></li>
             <li><a href="">About Us</a></li>
