@@ -1,5 +1,7 @@
 body{
     margin: 0;
+    opacity: 0;
+   transition: opacity 1s;
 }
 .navbar{
     height: 70px;

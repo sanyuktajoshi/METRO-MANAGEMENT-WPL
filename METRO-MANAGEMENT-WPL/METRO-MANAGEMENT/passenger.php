@@ -48,16 +48,28 @@
 </head>
 
 <body>
+    <script>
+    window.transitionToPage = function(href) {
+    document.querySelector('body').style.opacity = 0
+    setTimeout(function() { 
+        window.location.href = href
+    }, 500)
+}
+
+document.addEventListener('DOMContentLoaded', function(event) {
+    document.querySelector('body').style.opacity = 1
+})
+    </script>
     <header class="navbar">
         <img src="images/logo.png" alt="">
         <a href="home.html">
             <h1>MUMBAI&nbsp;METRO</h1>
         </a>
         <ul>
-            <li><a href="homepage.php">Home</a></li>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="selection.html">Book Ticket</a></li>
+            <li><a href="">Contact Us</a></li>
             <li><a href="">About Us</a></li>
-            <li><a href="">Book Ticket</a></li>
-            <li><a href="">Login</a></li>
         </ul>
     </header>
     <section class="main-content">

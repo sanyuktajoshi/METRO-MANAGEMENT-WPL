@@ -1,0 +1,230 @@
+body{
+  margin: 0;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.navbar{
+  height: 70px;
+  box-shadow: rgb(87, 92, 100) 0px 8px 24px;
+  background-color: #fefae0;
+  display: flex;
+  position:relative;
+  
+}
+
+.navbar img{
+  margin: 5px 30px;
+  width:60px;
+  height: 60px;
+  border-radius: 50%;
+  
+}
+
+h1 { 
+  margin: 5px 10px 5px 10px;
+  font-family: garamond;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 50px;
+  color: #283618;
+  align-items: center;
+  
+}
+
+
+ul {
+  
+  text-decoration: none;
+  margin-left: auto; 
+  margin-right: 30px;
+}
+.navbar ul li{
+  margin: 10px;
+  
+  font-size: 20px;
+  display: inline;
+}
+
+
+ul a{
+  color: #606c38;
+  text-decoration: none;
+}
+ul a:hover{
+  color: #89b0ae;
+}
+
+
+
+
+.banner img{
+  max-width: 100%;
+  max-height: 100%;
+  margin:0;
+  box-shadow: inset;
+  
+  
+}
+.banner .info-form {
+
+  position:absolute;
+  top: 60%;
+  bottom:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(250,249,249,0.84);
+  width: 400px;
+  height:750px; 
+  font-family: garamond;
+  font-size: 20px;
+
+  
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #555b6e;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Add padding to containers */
+.info-form .container {
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
+.middle-from{
+    font-weight:lighter;
+}
+
+
+
+/* The "Forgot password" text */
+
+
+label {
+  display: block;
+  font-size: 20px;
+  padding: 5px;
+  
+}
+h2{
+  
+   
+    text-align: center;
+    font-family: garamond;
+    font-size: 40px;
+}
+
+.inside{
+  align-items:center;
+}
+.dropdown-button {
+  background:#555b6e;
+  min-width:160px;
+  color:#fff;
+  letter-spacing:0.025rem;
+  box-sizing:border-box;
+  padding:10px 30px 10px 20px;
+  border-radius:0px;
+  position:relative;
+  cursor:pointer;
+  transition:background .3s ease;
+}
+.dropdown-button:hover {
+  background:grey;
+  transition:background .3s ease;
+}
+.triangle {
+  font-size:50%;
+  position:absolute;
+  right:10px;
+  top:-2px;
+  bottom:0;
+  margin-top:auto;
+  margin-bottom:auto;
+  height:5px;
+  color:#fff;
+}
+.dropdown ul.active {
+  visibility:visible;
+  transition:all .3s ease;
+  transform:scaleY(1);
+  color:#333;
+}
+.dropdown ul {
+  visibility:hidden;
+  overflow:hidden;
+  color:#fff;
+  transform-origin:top;
+  padding:0;
+  list-style:none;
+  transform:scaleY(0);
+  box-shadow:0px 2px 6px 0 rgba(0,0,0,0.2);
+  position:absolute;
+  left:0;
+  margin-top:2px;
+  top:100%;
+  min-width:90%;
+  transition:all .3s ease;
+  color:#555b6e;
+}
+.dropdown li {
+  background:#fff;
+  padding:8px 10px 8px 15px;
+  box-sizing:border-box;
+  cursor:pointer;
+  transition:background .2s ease;
+  position:relative;
+  color:#555b6e
+}
+a{
+  text-decoration:none;
+}
+.dropdown li.check {
+  background:#f6f6f6;
+}
+.dropdown li.check:after {
+  content:'';
+  position:absolute;
+  height:15px;
+  width:3px;
+  background:#ccc;
+  top:0;
+  bottom:0;
+  margin-top:auto;
+  transform:rotate(40deg);
+  margin-bottom:auto;
+  right:15px;
+}
+.dropdown li.check:before {
+  content:'';
+  position:absolute;
+  height:3px;
+  width:9px;
+  background:#ccc;
+  top:6px;
+  bottom:0;
+  margin-top:auto;
+  transform:rotate(40deg);
+  margin-bottom:auto;
+  right:19px;
+}
+.dropdown li:hover {
+  background:#f6f6f6;
+  transition:background .2s ease;
+}

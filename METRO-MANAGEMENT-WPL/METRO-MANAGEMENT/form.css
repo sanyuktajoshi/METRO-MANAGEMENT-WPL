@@ -1,6 +1,12 @@
+
+
 body{
     margin: 0;
+    opacity: 0;
+    transition: opacity 1s;
 }
+
+
 .navbar{
     height: 70px;
     box-shadow: rgb(87, 92, 100) 0px 8px 24px;
@@ -63,10 +69,10 @@ ul a:hover{
     
     
 }
-.banner .info-form{
+.banner .info-form {
 
     position:absolute;
-    top: 68%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: rgba(250,249,249,0.84);
@@ -74,9 +80,12 @@ ul a:hover{
     height:750px; 
     font-family: garamond;
     font-size: 20px;
+
+    
 }
 
-input[type=text], input[type=number] input[type=password]{
+
+input[type=text], input[type=number], input[type=password]{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -109,6 +118,11 @@ input[type=text], input[type=number] input[type=password]{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-weight: bold;
+  }
+
+  .middle-from{
+      font-weight:lighter;
   }
 
 
@@ -124,9 +138,10 @@ input[type=text], input[type=number] input[type=password]{
 }
   h2{
     
-      width: 50%;
+     
       text-align: center;
-      margin:100px;
+      
       font-family: garamond;
       font-size: 40px;
   }
+

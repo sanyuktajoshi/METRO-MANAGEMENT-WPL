@@ -46,16 +46,16 @@
         </a>
         <ul>
             <li><a href="homepage.html">Home</a></li>
+            <li><a href="selection.html">Book Ticket</a></li>
+            <li><a href="">Contact Us</a></li>
             <li><a href="">About Us</a></li>
-            <li><a href="">Book Ticket</a></li>
-            <li><a href="">Login</a></li>
         </ul>
     </header>
     <section class="main-content">
         <div class=banner>
             <img src="images/formbanner.jpg" alt="banner pic">
             <div class="info-form">
-                <h2></h2>
+                <h2>LOGIN</h2>
                 <form method="post" action="smart_card_booking.php">
                     <div class="container">
 
@@ -66,10 +66,10 @@
                         <input type="password" placeholder="Enter Password" name="password" required>
                         
                         <button type="submit">Continue</button>
-                        
+                        <p>No Smart Card? <a href="smart_card_reg.html">Register now!</a></p>
                     </div>
 
-                    </div>
+                    
                 </form>
             </div>
         </div>
