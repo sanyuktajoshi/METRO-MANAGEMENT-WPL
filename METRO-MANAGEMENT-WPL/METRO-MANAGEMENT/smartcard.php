@@ -71,7 +71,7 @@
                         <input type="password" placeholder="Enter Password" name="password" required>
                         
                         <button type="submit">Continue</button>
-                        <p>No Smart Card? <a href="smart_card_reg.html">Register now!</a></p>
+                        <p>No Smart Card? <a href="sc_reg.php">Register now!</a></p>
                     </div>
 
                     
