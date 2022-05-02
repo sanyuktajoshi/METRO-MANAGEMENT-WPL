@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +11,7 @@
     <title>Document</title>
 
 
-    <?php
-    session_start();
+    <?php session_start();
     
         $servername = "localhost";
         $username = "root";
@@ -22,24 +22,20 @@
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST'){     
 
-            $scid = $_POST['scid'];
-           
-            $password = $_POST['password'];
+            $scid = $_POST["scid"];
+            $password = $_POST["password"];
 
-            $_SESSION['sscid'] = $scid;
-            $_SESSION['spassword'] = $password;
+            $_SESSION['session_scid'] = $scid; 
+            $_SESSION['session_password'] = $password;
             
             $in_ch1 = mysqli_query($conn, "SELECT * FROM SMART_CARD WHERE SMART_CARD_ID='$scid' and PASSWORD='$password' ");
             
             $row = mysqli_fetch_array($in_ch1,MYSQLI_NUM);
 
+//            echo $row[8];
+
         }
     ?>
-
-
-
-
-
 
 </head>
 

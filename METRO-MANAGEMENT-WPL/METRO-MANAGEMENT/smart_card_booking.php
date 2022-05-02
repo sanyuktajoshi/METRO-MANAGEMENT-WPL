@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 
 <head>
 <script src="animation.js"></script>
@@ -12,10 +13,6 @@
 
     <?php session_start();
 
-        $scid2 = $_SESSION['sscid'];
-        $pd2 = $_SESSION['spassword'];
-
-
         $servername = "localhost";
         $username = "root";
         $password = "";
@@ -23,21 +20,25 @@
 
         $conn = mysqli_connect($servername,$username,$password,$dbname);
 
-
         if ($_SERVER['REQUEST_METHOD'] == 'POST'){ 
+            
+            $scid = $_POST["scid"];
+            $password = $_POST["password"];
+            $_SESSION['session_scid'] = $scid;
+            $_SESSION['session_password'] = $password;
 
-            
-            
-            $in_ch1 = mysqli_query($conn, "SELECT * FROM SMART_CARD WHERE SMART_CARD_ID='$scid2' AND PASSWORD='$pd2'  ");
+            $in_ch1 = mysqli_query($conn, "SELECT * FROM SMART_CARD WHERE SMART_CARD_ID='$scid' and PASSWORD='$password' ");
             
             $row = mysqli_fetch_array($in_ch1,MYSQLI_NUM);
             
         }
+        
         ?>
 
 </head>
 
 <body>
+    <script src="animation.js"></script>
     <header class="navbar">
         <img src="images/logo.png" alt="">
         <a href="home.html">
@@ -54,11 +55,15 @@
         <div class=banner>
             <img src="images/formbanner.jpg" alt="banner pic">
             <div class="info-form">
-
-                <p>Journies left:</p>
-                <span class="ticket-detail middle-from"><?php echo $row[8];?></span>
+                <h2>SMART CARD TICKET BOOKING</h2>
                 <form method="post" action="ticket_smartcard.php">
                     <div class="container">
+                        <p>First Name</p>
+                        <span class="ticket-detail middle-from"><?php echo $row[3];?></span>
+                        <p>Last Name</p>
+                        <span class="ticket-detail middle-from"><?php echo $row[4];?></span>
+                        <p>Journies left</p>
+                        <span class="ticket-detail middle-from"><?php echo $row[7];?></span>
                     <div class="source" label ="source">
                             <label for="source"> <b>Source</b></label>
                             <select name="source">

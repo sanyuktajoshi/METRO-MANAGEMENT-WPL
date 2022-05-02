@@ -72,12 +72,12 @@
 				<div class="middle-row middle-3">
 					<span class="ticket-label middle-from">Source</span>
 					<span class="ticket-label middle-valid">Ticket No.</span>
-					<span class="ticket-label middle-price">Price</span>
+					<span class="ticket-label middle-price">Time</span>
 				</div>
 				<div class="middle-row middle-3-3">
 					<span class="ticket-detail middle-from"><?php echo $source;?></span>
 					<span class="ticket-detail middle-valid"><?php echo $temp_ticketid;?></span>
-					<span class="ticket-detail middle-price">Rs5.30</span>
+					<span class="ticket-detail middle-price">11:30 am</span>
 				</div>
 				<div class="middle-row middle-4">
 					<span class="ticket-label middle-to">Destination</span>

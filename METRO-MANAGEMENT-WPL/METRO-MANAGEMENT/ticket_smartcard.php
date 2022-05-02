@@ -1,16 +1,22 @@
 <?php session_start();
 
-		$scid2 = $_SESSION['sscid'];
-		$pd2 = $_SESSION['spassword'];
+		$servername = "localhost";
+		$username = "root";
+		$password = "";
+		$dbname = "metro_station";
 
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "metro_station";
-
-        $conn = mysqli_connect($servername,$username,$password,$dbname);
+		$conn = mysqli_connect($servername,$username,$password,$dbname);
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST'){ 
+
+			if(isset($_SESSION['session_scid'])){
+				$scid2 = $_SESSION['session_scid'];
+				$pd2 = $_SESSION['session_password'];
+			}
+			else{
+				echo "not working";
+			}
+			
 
             $in_ch1 = mysqli_query($conn, "SELECT * FROM SMART_CARD WHERE SMART_CARD_ID='$scid2' and PASSWORD='$pd2' ");
             
@@ -84,12 +90,12 @@
 				<div class="middle-row middle-3">
 					<span class="ticket-label middle-from">Source</span>
 					<span class="ticket-label middle-valid">Ticket No.</span>
-					<span class="ticket-label middle-price">Price</span>
+					<span class="ticket-label middle-price">Time</span>
 				</div>
 				<div class="middle-row middle-3-3">
 					<span class="ticket-detail middle-from"><?php echo $source;?></span>
 					<span class="ticket-detail middle-valid"><?php echo $temp_ticketid;?></span>
-					<span class="ticket-detail middle-price">Rs5.30</span>
+					<span class="ticket-detail middle-price">11:30 am</span>
 				</div>
 				<div class="middle-row middle-4">
 					<span class="ticket-label middle-to">Destination</span>
